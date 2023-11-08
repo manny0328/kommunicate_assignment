@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "ubuntu";
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(0, 166, 255);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  background-color: transparent;
+}
+
+#phoneNum[type="number"]::-webkit-inner-spin-button,
+#phoneNum[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#phoneNum[type="number"] {
+  -moz-appearance: textfield;
+  /* Firefox */
+}
+
+.inputBox {
+  width: 190px;
+  height: 190px;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+
+.inputBox[type="radio"]:checked+.box {
+  border-color: 1px solid blue;
+}
+
+.checkbox-wrapper-64 input[type="checkbox"] {
+  visibility: hidden;
+  display: none;
+}
+
+.checkbox-wrapper-64 *,
+.checkbox-wrapper-64 ::after,
+.checkbox-wrapper-64 ::before {
+  box-sizing: border-box;
+}
+
+/* The switch - the box around the slider */
+.checkbox-wrapper-64 .switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 2.2em;
+  height: 1.2em;
+}
+
+/* Hide default HTML checkbox */
+.checkbox-wrapper-64 .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.checkbox-wrapper-64 .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #07386c;
+  border: 1px solid #adb5bd;
+  transition: .4s;
+  border-radius: 30px;
+}
+
+.yearly {
+  color: #7f8387;
+}
+
+.checkbox-wrapper-64 input:checked+#yearly {
+  color: hsl(213, 96%, 18%);
+}
+
+.checkbox-wrapper-64 input:focus+.slider {
+  box-shadow: 0 0 1px #007bff;
+}
